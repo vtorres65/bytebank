@@ -1,34 +1,30 @@
 public class CreaCuenta {
 
     public static void main(String[] args) {
-        Cuenta primeraCuenta = new Cuenta();
-        primeraCuenta.saldo = 1000;
+        Cuenta primeraCuenta = new Cuenta(1000);
 
-        System.out.println(primeraCuenta.saldo);
+        System.out.println(primeraCuenta.getSaldo());
 
-        Cuenta segundaCuenta = new Cuenta();
-        segundaCuenta.saldo = 2000;
+        Cuenta segundaCuenta = new Cuenta(2000);
 
-        System.out.println(segundaCuenta.saldo);
+        System.out.println(segundaCuenta.getSaldo());
 
-        Cuenta miCuenta = new Cuenta();
-        miCuenta.saldo = 500.0;
+        Cuenta miCuenta = new Cuenta(500);
         Cuenta otraCuenta = miCuenta;
-        otraCuenta.saldo += 1000.0;
+        otraCuenta.setSaldo(1000);
 
-        System.out.println(miCuenta.saldo);
+        System.out.println(miCuenta.getSaldo());
 
-        Cuenta primeraCuent = new Cuenta();
-        primeraCuent.saldo = 200;
-        System.out.println(primeraCuent.saldo);
+        Cuenta primeraCuent = new Cuenta(200);
+        System.out.println(primeraCuent.getSaldo());
 
-        primeraCuent.saldo += 100;
-        System.out.println(primeraCuent.saldo);
+        primeraCuent.setSaldo(100);
+        System.out.println(primeraCuent.getSaldo());
 
         Cuenta segundaCuent = primeraCuenta;
-        segundaCuenta.saldo = 50;
+        segundaCuenta.setSaldo(50);
 
-        System.out.println("primera cuenta tiene " + primeraCuent.saldo);
-        System.out.println("segunda cuenta tiene " + segundaCuent.saldo);
+        System.out.println("primera cuenta tiene " + primeraCuent.getSaldo());
+        System.out.println("segunda cuenta tiene " + segundaCuent.getSaldo());
     }
 }

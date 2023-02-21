@@ -2,14 +2,14 @@ public class PruebaReferencia {
 
     public static void main(String[] args) {
         Cliente diego = new Cliente();
-        diego.nombre = "Diego";
-        diego.documento = "456789";
-        diego.telefono = 123456;
+        diego.setNombre("Diego");
+        diego.setDocumento("456789");
+        diego.setTelefono(123456);
 
-        Cuenta cuentaDiego = new Cuenta();
+        Cuenta cuentaDiego = new Cuenta(1);
         cuentaDiego.setAgencia(1);
-        cuentaDiego.titular = diego;
+        cuentaDiego.setTitular(diego);
 
-        System.out.println(cuentaDiego.titular.documento);
+        System.out.println(cuentaDiego.getTitular());
     }
 }
